@@ -21,7 +21,7 @@ def generate_qr():
         totp = pyotp.TOTP(secret)  # No need to specify digest, SHA1 is default
 
         # Generate the TOTP URL and create the QR code
-        otp_url = totp.provisioning_uri(name=username, issuer_name="Bananas")
+        otp_url = totp.provisioning_uri(name=username, issuer_name="McDonalds")
         print(f"OTP URL: {otp_url}")  
         qr = qrcode.make(otp_url)
         buffered = BytesIO()

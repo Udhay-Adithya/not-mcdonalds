@@ -8,8 +8,6 @@ document.getElementById('qrForm').addEventListener('submit', function (event) {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data); // Log the entire response
-
             if (data.qr_code) {
                 document.getElementById('qrCode').style.display = 'block';
                 document.getElementById('qrCode').src = 'data:image/png;base64,' + data.qr_code;
@@ -43,11 +41,10 @@ document.getElementById('validateForm').addEventListener('submit', function (eve
     })
         .then(response => response.json())
         .then(data => {
-            const resultDiv = document.getElementById('result');
             if (data.valid) {
-                resultDiv.innerHTML = '<span class="valid">✔ Valid TOTP</span>';
+                alert('Login successful!');
             } else {
-                resultDiv.innerHTML = '<span class="invalid">✘ Invalid TOTP</span>';
+                alert('Login failed! Invalid TOTP.');
             }
         })
         .catch(error => {
