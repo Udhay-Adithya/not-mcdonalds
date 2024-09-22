@@ -1,7 +1,5 @@
-// Base URL for API calls
 const API_BASE_URL = 'https://not-mcdonald-backend-b9emusn3s.vercel.app';
 
-// Generate QR code on form submit
 document.getElementById('qrForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const formData = new FormData(this);

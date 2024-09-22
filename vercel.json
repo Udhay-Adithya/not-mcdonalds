@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "*.html",
+        "src": "index.html",
         "use": "@vercel/static"
       }
     ],
@@ -10,6 +10,15 @@
       {
         "src": "/(.*)",
         "dest": "/index.html"
+      },
+      {
+        "src": "/styles.css",
+        "dest": "/styles.css"
+      },
+      {
+        "src": "/script.js",
+        "dest": "/script.js"
       }
     ]
   }
+  
