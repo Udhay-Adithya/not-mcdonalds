@@ -1,8 +1,11 @@
+// Base URL for API calls
+const API_BASE_URL = 'https://not-mcdonald-backend-b9emusn3s.vercel.app';
+
 // Generate QR code on form submit
 document.getElementById('qrForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const formData = new FormData(this);
-    fetch('http://127.0.0.1:5000/generate_qr', {
+    fetch(`${API_BASE_URL}/generate_qr`, {
         method: 'POST',
         body: formData
     })
@@ -35,7 +38,7 @@ document.getElementById('validateForm').addEventListener('submit', function (eve
 
     formData.append('secret', secret);
 
-    fetch('http://127.0.0.1:5000/validate_totp', {
+    fetch(`${API_BASE_URL}/validate_totp`, {
         method: 'POST',
         body: formData
     })

@@ -10,28 +10,52 @@ body {
 
 .container {
     background: #fff;
-    padding: 20px;
-    border-radius: 9px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    display: flex;
+}
+
+.login-section {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.qr-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #e0e0e0;
+    padding-left: 30px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
-    border-radius: 9px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    font-size: 16px;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 8px;
     border: none;
     background-color: #ffcc00;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -39,10 +63,16 @@ button:hover {
 }
 
 .qr-code-box {
-    margin: 10px 0;
+    margin: 20px 0;
     border: 2px dashed #ccc;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 .valid {

@@ -10,22 +10,26 @@
 
 <body>
     <div class="container">
-        <h2>Login to your account</h2>
-        <form id="qrForm">
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <input type="text" id="email" name="email" placeholder="Email" required>
-            <button type="submit">Generate QR</button>
-        </form>
-        <div class="qr-code-box">
-            <img id="qrCode" src="" alt="QR Code" style="display:none" />
+        <div class="login-section">
+            <h2>Login to your account</h2>
+            <form id="qrForm">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <button type="submit">Generate QR</button>
+            </form>
+            <h2>Validate TOTP</h2>
+            <form id="validateForm">
+                <input type="text" id="totp" name="totp" placeholder="Enter TOTP" required>
+                <button type="submit">Validate</button>
+            </form>
+            <div id="result"></div>
         </div>
-
-        <h2>Validate TOTP</h2>
-        <form id="validateForm">
-            <input type="text" id="totp" name="totp" placeholder="Enter TOTP" required>
-            <button type="submit">Validate</button>
-        </form>
-        <div id="result"></div>
+        <div class="qr-section">
+            <h2>Your QR Code</h2>
+            <div class="qr-code-box">
+                <img id="qrCode" src="" alt="QR Code" style="display:none; max-width: 100%;" />
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
